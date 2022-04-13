@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route method="GET" url="/V1/mageplaza-helloworld/post">
+        <service class="Mageplaza\HelloWorld\Api\PostManagementInterface" method="getPost"/>
+        <resources>
+            <resource ref="Magento_Catalog::products" />
+        </resources>
+    </route>
+
+    <route method="GET" url="/V1/mageplaza-helloworld/getdata">
+        <service class="Mageplaza\HelloWorld\Api\PostManagementInterface" method="getData"/>
+        <resources>
+            <resource ref="Magento_Catalog::products" />
+        </resources>
+    </route>
+
+    <route method="GET" url="/V1/mageplaza-helloworld/delete">
+        <service class="Mageplaza\HelloWorld\Api\PostManagementInterface" method="getDelete"/>
+        <resources>
+            <resource ref="Magento_Catalog::products" />
+        </resources>
+    </route>
+
+    <route method="POST" url="/V1/mageplaza-helloworld/edit">
+        <service class="Mageplaza\HelloWorld\Api\PostManagementInterface" method="getEdit"/>
+        <resources>
+            <resource ref="Magento_Catalog::products" />
+        </resources>
+    </route>
+
+    <route method="POST" url="/V1/mageplaza-helloworld/create">
+        <service class="Mageplaza\HelloWorld\Api\PostManagementInterface" method="getCreate"/>
+        <resources>
+            <resource ref="Magento_Catalog::products" />
+        </resources>
+    </route>
+</routes>
